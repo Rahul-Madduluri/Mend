@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1A0F9D41A74FCE10050879E /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A0F9D31A74FCE10050879E /* HistoryViewController.m */; };
 		B76BA5211A74C0A60094C369 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B76BA5201A74C0A60094C369 /* main.m */; };
 		B76BA5241A74C0A60094C369 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B76BA5231A74C0A60094C369 /* AppDelegate.m */; };
 		B76BA5271A74C0A60094C369 /* Mend.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B76BA5251A74C0A60094C369 /* Mend.xcdatamodeld */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A1A0F9D21A74FCE10050879E /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
+		A1A0F9D31A74FCE10050879E /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
 		B76BA51B1A74C0A60094C369 /* Mend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B76BA51F1A74C0A60094C369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B76BA5201A74C0A60094C369 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -172,6 +175,8 @@
 				B76BA54F1A74C39E0094C369 /* LaunchViewController.m */,
 				B76BA5671A74E7A60094C369 /* NewEntryViewController.h */,
 				B76BA5681A74E7A60094C369 /* NewEntryViewController.m */,
+				A1A0F9D21A74FCE10050879E /* HistoryViewController.h */,
+				A1A0F9D31A74FCE10050879E /* HistoryViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -280,6 +285,7 @@
 				B76BA5661A74DBB10094C369 /* Drug.m in Sources */,
 				B76BA5601A74DAE90094C369 /* Professional.m in Sources */,
 				B76BA5241A74C0A60094C369 /* AppDelegate.m in Sources */,
+				A1A0F9D41A74FCE10050879E /* HistoryViewController.m in Sources */,
 				B76BA5691A74E7A60094C369 /* NewEntryViewController.m in Sources */,
 				B76BA5211A74C0A60094C369 /* main.m in Sources */,
 				B76BA55A1A74DAA40094C369 /* Patient.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import "LaunchViewController.h"
 #import "NewEntryViewController.h"
+#import "HistoryViewController.h"
 
 @interface LaunchViewController ()
 
@@ -77,7 +78,8 @@
 
 -(void)singleTappingCircle2:(UIGestureRecognizer *)recognizer
 {
-    NSLog(@"circle 2 click");
+    HistoryViewController *myNewVC = [[HistoryViewController alloc] init];
+    [self presentViewController:myNewVC animated:YES completion:nil];
 }
 /*
 #pragma mark - Navigation

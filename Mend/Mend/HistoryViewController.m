@@ -36,6 +36,7 @@
     CGRect tableRect = CGRectMake(0, 100, 400, 400);
     UITableView *tableView = [[UITableView alloc] initWithFrame:tableRect style:UITableViewStylePlain];
     tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
+    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     tableView.delegate = self;
     tableView.dataSource = self;
     [tableView reloadData];

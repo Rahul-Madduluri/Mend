@@ -90,8 +90,9 @@
 				B76BA5301A74C0A60094C369 /* LaunchScreen.xib */,
 				B76BA5251A74C0A60094C369 /* Mend.xcdatamodeld */,
 				B76BA51E1A74C0A60094C369 /* Supporting Files */,
-				B76BA54E1A74C39E0094C369 /* LaunchViewController.h */,
-				B76BA54F1A74C39E0094C369 /* LaunchViewController.m */,
+				B76BA5531A74D18C0094C369 /* Model */,
+				B76BA5571A74D1B90094C369 /* Controllers */,
+				B76BA5551A74D1A20094C369 /* View */,
 			);
 			path = Mend;
 			sourceTree = "<group>";
@@ -120,6 +121,29 @@
 				B76BA53C1A74C0A60094C369 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B76BA5531A74D18C0094C369 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B76BA5551A74D1A20094C369 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B76BA5571A74D1B90094C369 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B76BA54E1A74C39E0094C369 /* LaunchViewController.h */,
+				B76BA54F1A74C39E0094C369 /* LaunchViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

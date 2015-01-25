@@ -61,10 +61,10 @@
     CGRect circle2Rect = CGRectMake(100, 400, 200, 200);
     self.circle2 = [[UIImageView alloc] initWithImage:circle2];
     [self.circle2 setFrame:circle2Rect];
-    [self.circle1 setUserInteractionEnabled:YES];
+    [self.circle2 setUserInteractionEnabled:YES];
     UITapGestureRecognizer *singleTapCircle2 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleTappingCircle2:)];
     [singleTapCircle2 setNumberOfTapsRequired:1];
-    [self.circle1 addGestureRecognizer:singleTapCircle2];
+    [self.circle2 addGestureRecognizer:singleTapCircle2];
     [self.view addSubview:self.circle2];
 }
 

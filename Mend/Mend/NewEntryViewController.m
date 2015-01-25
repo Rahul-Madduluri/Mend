@@ -24,6 +24,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)loadView {
+    CGRect applicationFrame = [[UIScreen mainScreen] applicationFrame];
+    UIView *contentView = [[UIView alloc] initWithFrame:applicationFrame];
+    contentView.backgroundColor = [UIColor whiteColor];
+    self.view = contentView;
+    
+    
+}
 /*
 #pragma mark - Navigation
 

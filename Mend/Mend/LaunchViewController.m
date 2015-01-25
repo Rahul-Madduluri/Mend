@@ -7,6 +7,7 @@
 //
 
 #import "LaunchViewController.h"
+#import "NewEntryViewController.h"
 
 @interface LaunchViewController ()
 
@@ -70,7 +71,8 @@
 
 -(void)singleTappingCircle1:(UIGestureRecognizer *)recognizer
 {
-    NSLog(@"circle 1 click");
+    NewEntryViewController *myNewVC = [[NewEntryViewController alloc] init];
+    [self presentViewController:myNewVC animated:YES completion:nil];
 }
 
 -(void)singleTappingCircle2:(UIGestureRecognizer *)recognizer

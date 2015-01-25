@@ -15,6 +15,11 @@
 		B76BA5321A74C0A60094C369 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B76BA5301A74C0A60094C369 /* LaunchScreen.xib */; };
 		B76BA53E1A74C0A60094C369 /* MendTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B76BA53D1A74C0A60094C369 /* MendTests.m */; };
 		B76BA5501A74C39E0094C369 /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B76BA54F1A74C39E0094C369 /* LaunchViewController.m */; };
+		B76BA55A1A74DAA40094C369 /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = B76BA5591A74DAA40094C369 /* Patient.m */; };
+		B76BA55D1A74DAD00094C369 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = B76BA55C1A74DAD00094C369 /* Entry.m */; };
+		B76BA5601A74DAE90094C369 /* Professional.m in Sources */ = {isa = PBXBuildFile; fileRef = B76BA55F1A74DAE90094C369 /* Professional.m */; };
+		B76BA5631A74DAF60094C369 /* Symptom.m in Sources */ = {isa = PBXBuildFile; fileRef = B76BA5621A74DAF60094C369 /* Symptom.m */; };
+		B76BA5661A74DBB10094C369 /* Drug.m in Sources */ = {isa = PBXBuildFile; fileRef = B76BA5651A74DBB10094C369 /* Drug.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +47,16 @@
 		B76BA53D1A74C0A60094C369 /* MendTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MendTests.m; sourceTree = "<group>"; };
 		B76BA54E1A74C39E0094C369 /* LaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchViewController.h; sourceTree = "<group>"; };
 		B76BA54F1A74C39E0094C369 /* LaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
+		B76BA5581A74DAA40094C369 /* Patient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Patient.h; sourceTree = "<group>"; };
+		B76BA5591A74DAA40094C369 /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Patient.m; sourceTree = "<group>"; };
+		B76BA55B1A74DAD00094C369 /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entry.h; sourceTree = "<group>"; };
+		B76BA55C1A74DAD00094C369 /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
+		B76BA55E1A74DAE90094C369 /* Professional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Professional.h; sourceTree = "<group>"; };
+		B76BA55F1A74DAE90094C369 /* Professional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Professional.m; sourceTree = "<group>"; };
+		B76BA5611A74DAF60094C369 /* Symptom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Symptom.h; sourceTree = "<group>"; };
+		B76BA5621A74DAF60094C369 /* Symptom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Symptom.m; sourceTree = "<group>"; };
+		B76BA5641A74DBB10094C369 /* Drug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drug.h; sourceTree = "<group>"; };
+		B76BA5651A74DBB10094C369 /* Drug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drug.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +141,16 @@
 		B76BA5531A74D18C0094C369 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B76BA5581A74DAA40094C369 /* Patient.h */,
+				B76BA5591A74DAA40094C369 /* Patient.m */,
+				B76BA55E1A74DAE90094C369 /* Professional.h */,
+				B76BA55F1A74DAE90094C369 /* Professional.m */,
+				B76BA5611A74DAF60094C369 /* Symptom.h */,
+				B76BA5621A74DAF60094C369 /* Symptom.m */,
+				B76BA5641A74DBB10094C369 /* Drug.h */,
+				B76BA5651A74DBB10094C369 /* Drug.m */,
+				B76BA55B1A74DAD00094C369 /* Entry.h */,
+				B76BA55C1A74DAD00094C369 /* Entry.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -246,8 +271,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B76BA55D1A74DAD00094C369 /* Entry.m in Sources */,
+				B76BA5661A74DBB10094C369 /* Drug.m in Sources */,
+				B76BA5601A74DAE90094C369 /* Professional.m in Sources */,
 				B76BA5241A74C0A60094C369 /* AppDelegate.m in Sources */,
 				B76BA5211A74C0A60094C369 /* main.m in Sources */,
+				B76BA55A1A74DAA40094C369 /* Patient.m in Sources */,
+				B76BA5631A74DAF60094C369 /* Symptom.m in Sources */,
 				B76BA5271A74C0A60094C369 /* Mend.xcdatamodeld in Sources */,
 				B76BA5501A74C39E0094C369 /* LaunchViewController.m in Sources */,
 			);
@@ -440,6 +470,7 @@
 				B76BA5431A74C0A60094C369 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B76BA5441A74C0A60094C369 /* Build configuration list for PBXNativeTarget "MendTests" */ = {
 			isa = XCConfigurationList;
@@ -448,6 +479,7 @@
 				B76BA5461A74C0A60094C369 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

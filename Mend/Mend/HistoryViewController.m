@@ -7,10 +7,12 @@
 //
 
 #import "HistoryViewController.h"
+#import "EntryViewController.h"
 
 @interface HistoryViewController ()
 
 @property (nonatomic, strong) UITableView *tableView;
+
 
 @end
 
@@ -19,6 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _treatments = [[NSDictionary alloc] initWithObjects:@[@"1", @"2", @"3"] forKeys:@[@"A", @"B", @"C"]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,6 +60,27 @@
     }
     return cell;
 }
+
+// segue
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    EntryViewController *myNewVC = [[EntryViewController alloc] init];
+    //[self.navigationController pushViewController:myNewVC animated:YES];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self presentViewController:myNewVC animated:YES completion:nil];
+    });
+    
+    //[self performSegueWithIdentifier: @"MySegue" sender: self];
+}
+
+/*
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSLog(@"Yupppp");
+    EntryViewController *vcToPushTo = [segue destinationViewController];
+}
+*/
 
 /*
 #pragma mark - Navigation

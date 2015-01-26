@@ -37,13 +37,13 @@
     self.view = contentView;
     // mend logo
     UIImage *mendLogo = [UIImage imageNamed:@"bandaid.png"];
-    CGRect logoRect = CGRectMake(50, 50, 100, 100);
+    CGRect logoRect = CGRectMake(35, 50, 75, 75);
     self.mendLogo = [[UIImageView alloc] initWithImage:mendLogo];
     [self.mendLogo setFrame:logoRect];
     [self.view addSubview:self.mendLogo];
     // mend title
     UIImage *mendImage = [UIImage imageNamed:@"MendTitle.png"];
-    CGRect rect = CGRectMake(150, 50, 200, 100);
+    CGRect rect = CGRectMake(100, 50, 250, 100);
     self.mendTitle = [[UIImageView alloc] initWithImage:mendImage];
     [self.mendTitle setFrame:rect];
     [self.view addSubview:self.mendTitle];

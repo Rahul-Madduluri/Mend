@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NewEntryViewController : UIViewController
+@interface NewEntryViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
+
+@property (nonatomic, strong) NSMutableSet *allSymptoms;
+@property (nonatomic, strong) NSMutableArray *autocompleteSymptoms;
 
 @end

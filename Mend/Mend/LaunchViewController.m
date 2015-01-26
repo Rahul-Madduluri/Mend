@@ -14,8 +14,8 @@
 
 @property (nonatomic, strong) UIImageView *mendTitle;
 @property (nonatomic, strong) UIImageView *mendLogo;
-@property (nonatomic, strong) UIImageView *circle1;
-@property (nonatomic, strong) UIImageView *circle2;
+@property (nonatomic, strong) UIButton *circle1;
+@property (nonatomic, strong) UIButton *circle2;
 
 @end
 
@@ -38,22 +38,21 @@
     self.view = contentView;
     // mend logo
     UIImage *mendLogo = [UIImage imageNamed:@"bandaid.png"];
-    CGRect logoRect = CGRectMake(50, 50, 100, 100);
+    CGRect logoRect = CGRectMake(35, 50, 75, 75);
     self.mendLogo = [[UIImageView alloc] initWithImage:mendLogo];
     [self.mendLogo setFrame:logoRect];
     [self.view addSubview:self.mendLogo];
     // mend title
     UIImage *mendImage = [UIImage imageNamed:@"MendTitle.png"];
-    CGRect rect = CGRectMake(150, 50, 200, 100);
+    CGRect rect = CGRectMake(100, 50, 250, 100);
     self.mendTitle = [[UIImageView alloc] initWithImage:mendImage];
     [self.mendTitle setFrame:rect];
     [self.view addSubview:self.mendTitle];
     // circle1
     UIImage *circle1 = [UIImage imageNamed:@"circle1.png"];
     CGRect circle1Rect = CGRectMake(100, 200, 200, 200);
-    self.circle1 = [[UIImageView alloc] initWithImage:circle1];
-    [self.circle1 setFrame:circle1Rect];
-    [self.circle1 setUserInteractionEnabled:YES];
+    self.circle1 = [[UIButton alloc] initWithFrame:circle1Rect];
+    [self.circle1 setImage:circle1 forState:UIControlStateNormal];
     UITapGestureRecognizer *singleTapCircle1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleTappingCircle1:)];
     [singleTapCircle1 setNumberOfTapsRequired:1];
     [self.circle1 addGestureRecognizer:singleTapCircle1];
@@ -61,9 +60,8 @@
     // circle2
     UIImage *circle2 = [UIImage imageNamed:@"circle2.png"];
     CGRect circle2Rect = CGRectMake(100, 400, 200, 200);
-    self.circle2 = [[UIImageView alloc] initWithImage:circle2];
-    [self.circle2 setFrame:circle2Rect];
-    [self.circle2 setUserInteractionEnabled:YES];
+    self.circle2 = [[UIButton alloc] initWithFrame:circle2Rect];
+    [self.circle2 setImage:circle2 forState:UIControlStateNormal];
     UITapGestureRecognizer *singleTapCircle2 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleTappingCircle2:)];
     [singleTapCircle2 setNumberOfTapsRequired:1];
     [self.circle2 addGestureRecognizer:singleTapCircle2];

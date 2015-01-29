@@ -36,6 +36,9 @@
     UIView *contentView = [[UIView alloc] initWithFrame:applicationFrame];
     contentView.backgroundColor = [UIColor whiteColor];
     self.view = contentView;
+    
+    // UI
+    //--------------------
     // mend logo
     UIImage *mendLogo = [UIImage imageNamed:@"bandaid.png"];
     CGRect logoRect = CGRectMake(35, 50, 75, 75);
@@ -66,6 +69,7 @@
     [singleTapCircle2 setNumberOfTapsRequired:1];
     [self.circle2 addGestureRecognizer:singleTapCircle2];
     [self.view addSubview:self.circle2];
+    //------------------------
 }
 
 -(void)singleTappingCircle1:(UIGestureRecognizer *)recognizer

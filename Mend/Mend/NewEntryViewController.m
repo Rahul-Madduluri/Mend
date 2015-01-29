@@ -29,6 +29,8 @@
     self.smartField = [[UITextField alloc] initWithFrame:frame];
     self.smartField.delegate = self;
     self.smartField.font = [UIFont boldSystemFontOfSize:20];
+    self.smartField.placeholder = @"symptom";
+    self.smartField.autocapitalizationType = UITextAutocapitalizationTypeNone;
     [self.view addSubview:self.smartField];
     
     //table view
@@ -110,6 +112,11 @@
     substring = [substring stringByReplacingCharactersInRange:range withString:string];
     [self searchAutocompleteEntriesWithSubstring:substring];
     return YES;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return NO;
 }
 
 - (void)searchAutocompleteEntriesWithSubstring:(NSString *)substring {

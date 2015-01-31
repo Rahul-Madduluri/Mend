@@ -8,10 +8,12 @@
 
 #import "HistoryViewController.h"
 #import "EntryViewController.h"
+#import "LaunchViewController.h"
 
 @interface HistoryViewController ()
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) UIButton *backButton;
 
 
 @end
@@ -21,7 +23,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    //initialize treatments
     self.treatments = [[NSOrderedSet alloc] initWithObjects:@[@"1", @"2", @"3"], nil];
+    
+    //back button
+    CGRect buttonFrame = CGRectMake(15, 30, 35, 35);
+    self.backButton = [[UIButton alloc] initWithFrame:buttonFrame];
+    UIImage *back = [UIImage imageNamed:@"backarrow(clear).png"];
+    [self.backButton setImage:back forState:UIControlStateNormal];
+    UITapGestureRecognizer *singleTapBack = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backToLaunchScreen:)];
+    [singleTapBack setNumberOfTapsRequired:1];
+    [self.backButton addGestureRecognizer:singleTapBack];
+    [self.view addSubview:self.backButton];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -73,6 +87,14 @@
     
 }
 //--------------------------------------------------------------------------------------------
+
+//sends app back to launch screen when back button is pressed
+-(void)backToLaunchScreen:(UIGestureRecognizer *)recognizer
+{
+    LaunchViewController *myNewVC = [[LaunchViewController alloc] init];
+    [self presentViewController:myNewVC animated:YES completion:nil];
+}
+
 
 
 

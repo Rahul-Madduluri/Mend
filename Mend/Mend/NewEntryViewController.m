@@ -50,7 +50,6 @@
     UITapGestureRecognizer *singleTapBack = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backToLaunchScreen:)];
     [singleTapBack setNumberOfTapsRequired:1];
     [self.backButton addGestureRecognizer:singleTapBack];
-
     [self.view addSubview:self.backButton];
     
     

@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _treatments = [[NSDictionary alloc] initWithObjects:@[@"1", @"2", @"3"] forKeys:@[@"A", @"B", @"C"]];
+    self.treatments = [[NSOrderedSet alloc] initWithObjects:@[@"1", @"2", @"3"], nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,9 +45,10 @@
     [tableView reloadData];
     
     [self.view addSubview:tableView];
-    
 }
 
+//table view delegate
+//--------------------------------------------------------------------------------------------
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 9;
 }
@@ -62,34 +63,17 @@
 }
 
 // segue
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     EntryViewController *myNewVC = [[EntryViewController alloc] init];
-    //[self.navigationController pushViewController:myNewVC animated:YES];
+
     dispatch_async(dispatch_get_main_queue(), ^{
         [self presentViewController:myNewVC animated:YES completion:nil];
     });
     
-    //[self performSegueWithIdentifier: @"MySegue" sender: self];
 }
+//--------------------------------------------------------------------------------------------
 
-/*
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    NSLog(@"Yupppp");
-    EntryViewController *vcToPushTo = [segue destinationViewController];
-}
-*/
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

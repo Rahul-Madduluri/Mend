@@ -10,6 +10,6 @@
 
 @interface HistoryViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) NSDictionary *treatments;
+@property (nonatomic, strong) NSOrderedSet *treatments;
 
 @end

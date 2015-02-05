@@ -8,12 +8,13 @@
 
 #import "NewEntryViewController.h"
 #import "LaunchViewController.h"
+#import "Symptoms.h"
 
 @interface NewEntryViewController ()
 
 @property (nonatomic, strong) UITextField *smartField;
 @property (nonatomic, strong) UITableView *autocompleteTableView;
-@property (nonatomic, strong) UIImageView *askAPro;
+@property (nonatomic, strong) UIButton *askAPro;
 @property (nonatomic, strong) UIButton *backButton;
 
 @end
@@ -54,13 +55,17 @@
     
     
     //all possible symptoms
-    self.allSymptoms = [[NSMutableSet alloc] initWithArray:[NSArray arrayWithObjects:@"nauseau", @"cough", @"rash", @"sore throat", @"wheezing", @"congestion", @"sneezing", @"runny nose", @"dry eyes", @"itchy skin", @"bumps", @"abdominal pain", @"allergy", @"anxiety", @"bad breath", @"blurred vision", @"bloody nose", @"breast lumps", @"chest pain", @"chills", @"cold", @"confusion", @"depression", @"diarrhea", @"fever", @"fatigue", @"flu", @"fainting", @"gas", @"hair loss", @"headache", @"heartburn", @"hot flashes", @"insomnia", @"inattention", @"memory loss", @"mood swings", @"muscle cramps", @"neck pain", @"pale skin", @"pink eye", @"rash", @"runny nose", @"seizures", @"stomach cramps", nil]];
+    self.allSymptoms = [[Symptoms sharedInstance] allSymptoms];
     self.autocompleteSymptoms = [[NSMutableArray alloc] init];
     
     //button to ask professional
     UIImage *ask = [UIImage imageNamed:@"askapro.png"];
-    self.askAPro = [[UIImageView alloc] initWithImage:ask];
+    self.askAPro = [[UIButton alloc] init];
     self.askAPro.frame = CGRectMake(115, 400, 150, 150);
+    [self.askAPro setImage:ask forState:UIControlStateNormal];
+    [self.askAPro addTarget:self
+               action:@selector(askAPro:)
+     forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.askAPro];
 
 }
